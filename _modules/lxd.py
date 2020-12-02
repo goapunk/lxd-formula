@@ -421,7 +421,7 @@ def pylxd_save_object(obj):
     This is an internal method, no CLI Example.
     '''
     try:
-        obj.save()
+        obj.save(wait=True)
     except pylxd.exceptions.LXDAPIException as e:
         raise CommandExecutionError(six.text_type(e))
 
